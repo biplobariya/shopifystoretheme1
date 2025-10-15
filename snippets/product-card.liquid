@@ -1,0 +1,18 @@
+<article class="product-card">
+  <a href="{{ product.url }}" class="thumb">
+    {{ product.featured_image | image_url: width: 600 | image_tag: alt: product.title }}
+  </a>
+  <h3 class="title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+  <p class="price">
+    {% if product.compare_at_price_max > product.price %}
+      <span class="sale">{{ product.price | money }}</span>
+      <s class="compare">{{ product.compare_at_price_max | money }}</s>
+    {% else %}
+      {{ product.price | money }}
+    {% endif %}
+  </p>
+  <form method="post" action="/cart/add">
+    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+    <button class="btn-small" type="submit">{{ 'buttons.add_to_cart' | t }}</button>
+  </form>
+</article>
