@@ -5,11 +5,13 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16 items-center">
       <!-- Logo -->
-      <a href="#" class="flex items-center space-x-2">
-        <img src="https://placehold.co/40x40" alt="Logo" class="h-10 w-10">
-        <span class="font-bold text-xl text-gray-800">MySite</span>
+      <a href="{{ shop.url }}" class="flex items-center space-x-2">
+        {% if settings.logo != blank %}
+          <img src="{{ settings.logo | img_url:'small' }}" width="auto" height="auto" alt="">
+          {%  else %}
+            {{ shop.name }}
+        {% endif %}
       </a>
-
       <!-- Menu (Desktop) -->
       <ul class="hidden md:flex space-x-8">
         {%  for link in section.settings.menu.links %}  
@@ -29,7 +31,6 @@
                     d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-
           <!-- Dropdown Menu -->
           <div
             class="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-lg mt-0 w-40 z-50">
@@ -43,8 +44,6 @@
 
         {% endfor %}
         
-
-
       </ul>
 
       <!-- Right side button -->
