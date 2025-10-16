@@ -13,6 +13,7 @@
   "sections": {
     "announcement": {
       "type": "announcementbar",
+      "custom_css": [],
       "settings": {
         "announcement-message": "50% OFF for US based delivery! get it"
       }
