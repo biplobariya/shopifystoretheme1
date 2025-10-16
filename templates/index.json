@@ -8,16 +8,7 @@
         "btn_label": "Shop now",
         "btn_url": "/collections/all"
       }
-    },
-    "featured": {
-      "type": "featured-collection",
-      "settings": {
-        "heading": "Featured products",
-        "collection": "all",
-        "limit": 8,
-        "columns": 4
-      }
     }
   },
-  "order": ["hero", "featured"]
+  "order": ["hero"]
 }
