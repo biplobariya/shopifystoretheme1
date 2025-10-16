@@ -1,13 +1,21 @@
 
 <div class="announcementbar">
-    <p>This is announcementbar</p>
+    <p class="p-4 bg-slate-900 text-slate-100 text-center">
+        {{section.settings.announcement-message}}
+    </p>
 </div>
 
 {% schema %}
 {
     "name": "Announcementbar",
     "settings": [
-        
+            {
+                "type": "text",
+                "id": "announcement-message",
+                "label": "Announcement text",
+                "default": "25% OFF for US based delivery! get it"
+            }    
+
         ]
 }
 {% endschema %}
