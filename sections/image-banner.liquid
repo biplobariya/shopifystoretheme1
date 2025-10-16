@@ -1,0 +1,36 @@
+<div class="image-banner-{{section.id}}">
+    <div class="img-banner-main">
+{% if section.settings.image != blank %}
+            {{ section.settings.image |  image_url: width:1440 
+            |  image_tag: widths:'375,550,750,1100,1500',
+               width: section.settings.image.width,
+               height: image_width,
+               fethpriority:'high'
+             }}
+        {% else %}
+            {{ 'hero-apparel-1' |  placeholder_svg_tag: 'placeholder-svg' }}
+        {% endif %}
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Image Banner",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+
+    ],    
+        
+    "presets": [
+        {
+            "name": "Image Banner",
+            "category": "Image"
+        }
+    ]
+}
+{% endschema %}
