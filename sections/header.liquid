@@ -16,13 +16,13 @@
           <li>
             <a href="{{ link.url }}" class="text-gray-700 hover:text-blue-600">{{ link.title }}</a>
           </li>
-        {% endfor %}
-        
+
+        {% if link.links.size > 0 %}
         <!-- Dropdown -->
-        <div class="relative group">
+        <ul class="relative group">
           <!-- Dropdown Trigger -->
           <button class="text-gray-700 hover:text-blue-600 inline-flex items-center">
-            Services
+            {{ link.title }}
             <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
                 viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round"
@@ -33,11 +33,17 @@
           <!-- Dropdown Menu -->
           <div
             class="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-lg mt-0 w-40 z-50">
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Web Design</a>
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SEO</a>
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Marketing</a>
+          {% for child in link.links %}
+            <a href="{{ child.url }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">{{ child.title }}</a>
+          {%endfor%}
           </div>
-        </div>
+        </ul>
+
+        {% endif %}
+
+        {% endfor %}
+        
+
 
       </ul>
 

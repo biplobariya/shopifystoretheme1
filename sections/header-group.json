@@ -20,9 +20,7 @@
     },
     "header": {
       "type": "header",
-      "settings": {
-        "menu": "main-menu-1"
-      }
+      "settings": {}
     }
   },
   "order": [
