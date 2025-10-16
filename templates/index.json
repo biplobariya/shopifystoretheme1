@@ -11,13 +11,16 @@
   "sections": {
     "hero": {
       "type": "hero",
-      "settings": {
-        "title": "Welcome to {{ shop.name }}",
-        "subtitle": "Quality you’ll love",
-        "btn_label": "Shop now",
-        "btn_url": "/collections/all"
-      }
+      "settings": {}
+    },
+    "image_banner_KBTmLh": {
+      "type": "image-banner",
+      "name": "Image Banner",
+      "settings": {}
     }
   },
-  "order": ["hero"]
+  "order": [
+    "hero",
+    "image_banner_KBTmLh"
+  ]
 }
