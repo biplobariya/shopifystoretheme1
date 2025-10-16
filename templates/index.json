@@ -9,18 +9,14 @@
  */
 {
   "sections": {
-    "hero": {
-      "type": "hero",
-      "settings": {}
-    },
-    "image_banner_KBTmLh": {
+    "image_banner": {
       "type": "image-banner",
-      "name": "Image Banner",
-      "settings": {}
+      "settings": {
+        "image": "shopify://shop_images/banner.jpg"
+      }
     }
   },
   "order": [
-    "hero",
-    "image_banner_KBTmLh"
+    "image_banner"
   ]
 }
