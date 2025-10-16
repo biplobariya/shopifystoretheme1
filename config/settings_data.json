@@ -8,7 +8,10 @@
  * ------------------------------------------------------------
  */
 {
-  "current": "Default",
+  "current": {
+    "logo": "shopify://shop_images/small-bitcoin.png",
+    "content_for_index": []
+  },
   "presets": {
     "Default": {}
   }
