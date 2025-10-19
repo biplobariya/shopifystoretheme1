@@ -14,7 +14,7 @@
         <div class="banner-text">
             <div class="container">
                 <h2>{{ section.settings.heading }}</h2>
-                {% if %}
+                {% if {{ section.settings.sub_heading }} != blank %}
                 <p>{{ section.settings.sub_heading }}</p>
                 {% endif %}
                 <div class="banner-cta">
