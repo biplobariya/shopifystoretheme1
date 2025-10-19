@@ -1,4 +1,5 @@
 
+{%  assign collection = section.settings.collection.products %}
 
 <div class="featured-collection-sec">
     <div class="container">
@@ -10,15 +11,43 @@
                 {% endif %}
             </p>
         </div>
+
         <div class="row">
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        Product card
+            {% for product in collection %}
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            {{ product.featured_image |  image_url: width: 300 |  image_tag }}
+                            <div class="product-info">
+                                <h3>{{ product.title }}</h3>
+                                <p>Price: {{ product.price |  money }}</p>
+                                <div class="cta">
+                                    <a href="{{ product.url }}">View Details</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div>    
+                {% for item in (1..8) %}
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                {{ 'product-apparel-' |  append: forloop.index | placeholder_svg_tag: 'placeholder-svg' }}
+                                <div class="product-info">
+                                    <h3>Product {{ forloop.index }} </h3>
+                                    <p>Price: $24.00</p>
+                                    <div class="cta">
+                                        <a href="{{ product.url }}">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                {% endfor %}            
+            {% endfor %}
+
         </div>
+
     </div>
 </div>
 
