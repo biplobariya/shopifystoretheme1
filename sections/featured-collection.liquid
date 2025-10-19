@@ -1,0 +1,53 @@
+
+
+<div class="featured-collection-sec">
+    <div class="container">
+        <div class="section-header">
+            <h1 class="heading"> {{ section.settings.heading }} </h1>
+            <p class="sub-heading">
+                {% if section.settings.sub_heading != blank  %}  
+                    {{ section.settings.sub_heading }}
+                {% endif %}
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        Product card
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Featured collection",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Featured collection"
+        },
+        {
+            "type": "richtext",
+            "id": "sub_heading",
+            "label": "Sub Heading"
+        },
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "Select Collection"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Featured collection",
+                "category": "collection"
+            }
+        ]
+}
+{% endschema %}
