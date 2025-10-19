@@ -19,19 +19,9 @@
         "label_1": "Visit now",
         "label_2": "https://google.com"
       }
-    },
-    "featured_collection_J3WnRk": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "heading": "Featured collection",
-        "sub_heading": "",
-        "collection": ""
-      }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection_J3WnRk"
+    "image_banner"
   ]
 }
