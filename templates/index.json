@@ -12,7 +12,11 @@
     "image_banner": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify://shop_images/dada_design-vWyq7C2lfFg-unsplash.jpg"
+        "image": "shopify://shop_images/dada_design-vWyq7C2lfFg-unsplash.jpg",
+        "heading": "Our best winter collection",
+        "sub_heading": "<p>This is the colllection description for winter cloths <strong>Lorem Ipsum</strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>",
+        "label_1": "Visit now",
+        "label_2": "https://google.com"
       }
     }
   },
