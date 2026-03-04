@@ -17,12 +17,15 @@
     {% sections 'header-group' %}
 
 
-    <main id="MainContent" class="container mx-auto">{{ content_for_layout }}</main>
+    <main id="MainContent" role="main">
+      {{ content_for_layout }}
+    </main>
 
     {% comment %}Footer Group {% endcomment %}
     {% sections 'footer-group' %}
     
-
+      <script src="{{ 'theme.js' | asset_url }}" defer></script>
 
   </body>
 </html>
+

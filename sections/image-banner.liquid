@@ -6,28 +6,30 @@
 
 
 <div class="image-banner-{{section.id}}">
-    <div class="img-banner-main">
-    {%  assign image_width = section.settings.image.width |  divided_by: section.settings.image.aspect_ratio %}   
-    {% if section.settings.image != blank %}
-            {{ section.settings.image |  image_url: width:1440 
-            |  image_tag: widths:'375,550,750,1100,1500',
-            width: section.settings.image.width,
-            height: image_width,
-            fethpriority:'high'
-            }}
-        {% else %}
-            {{ 'hero-apparel-1' |  placeholder_svg_tag: 'placeholder-svg' }}
-        {% endif %}
+    <div class="container mx-auto">
+        <div class="img-banner-main">
+        {%  assign image_width = section.settings.image.width |  divided_by: section.settings.image.aspect_ratio %}   
+        {% if section.settings.image != blank %}
+                {{ section.settings.image |  image_url: width:1440 
+                |  image_tag: widths:'375,550,750,1100,1500',
+                width: section.settings.image.width,
+                height: image_width,
+                fethpriority:'high'
+                }}
+            {% else %}
+                {{ 'hero-apparel-1' |  placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
 
-        <div class="container">
-        <div class="banner-text">
-                <h2>{{ section.settings.heading }}</h2>
-                {% if section.settings.sub_heading != blank %}
-                    <p>{{ section.settings.sub_heading }}</p>
-                {% endif %}
-                <div class="banner-cta">
-                    <div class="cta-action">
-                        <a href="{{ section.settings.label_2 }}" class="">{{ section.settings.label_1 }}</a>
+            <div class="container">
+            <div class="banner-text">
+                    <h2>{{ section.settings.heading }}</h2>
+                    {% if section.settings.sub_heading != blank %}
+                        <p>{{ section.settings.sub_heading }}</p>
+                    {% endif %}
+                    <div class="banner-cta">
+                        <div class="cta-action">
+                            <a href="{{ section.settings.label_2 }}" class="">{{ section.settings.label_1 }}</a>
+                        </div>
                     </div>
                 </div>
             </div>

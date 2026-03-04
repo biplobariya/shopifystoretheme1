@@ -1,8 +1,8 @@
 
 {%  assign collection = section.settings.collection.products %}
 
-<div class="featured-collection-sec">
-    <div class="container">
+<div class="featured-collection-sec pt-16">
+    <div class="container mx-auto">
         <div class="section-header">
             <h1 class="heading"> {{ section.settings.heading }} </h1>
             <p class="sub-heading">
@@ -12,7 +12,7 @@
             </p>
         </div>
 
-        <div class="row">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
             {% for product in collection %}
                 <div class="col-md-3">
                     <div class="card">
@@ -28,16 +28,21 @@
                         </div>
                     </div>
                 </div>    
+                {%  else %}
                 {% for item in (1..8) %}
                     <div class="col-md-3">
                         <div class="card">
                             <div class="card-body">
-                                {{ 'product-apparel-' |  append: forloop.index | placeholder_svg_tag: 'placeholder-svg' }}
+                                {% capture current %}
+                                {% cycle 'product', 'collection', 'image' %}
+                                {% endcapture %}
+                                {{ current | placeholder_svg_tag }}
+
                                 <div class="product-info">
                                     <h3>Product {{ forloop.index }} </h3>
                                     <p>Price: $24.00</p>
                                     <div class="cta">
-                                        <a href="{{ product.url }}">View Details</a>
+                                        <a class="btn" href="{{ product.url }}">View Details</a>
                                     </div>
                                 </div>
                             </div>
