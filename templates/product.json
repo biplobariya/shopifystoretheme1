@@ -26,7 +26,7 @@
           "type": "price",
           "settings": {}
         },
-        "variants_97hBVT": {
+        "variants_FakCGP": {
           "type": "variants",
           "settings": {
             "variant_type": "pills"
@@ -47,7 +47,7 @@
         "vendor",
         "title",
         "price",
-        "variants_97hBVT",
+        "variants_FakCGP",
         "quantity_selector",
         "buy_buttons"
       ],
