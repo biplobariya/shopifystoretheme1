@@ -12,12 +12,6 @@
     "main-product": {
       "type": "main-product",
       "blocks": {
-        "variants_ncyAWg": {
-          "type": "variants",
-          "settings": {
-            "variant_type": "pills"
-          }
-        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -27,6 +21,12 @@
         "title": {
           "type": "title",
           "settings": {}
+        },
+        "variants_ncyAWg": {
+          "type": "variants",
+          "settings": {
+            "variant_type": "pills"
+          }
         },
         "price": {
           "type": "price",
@@ -44,9 +44,9 @@
         }
       },
       "block_order": [
-        "variants_ncyAWg",
         "vendor",
         "title",
+        "variants_ncyAWg",
         "price",
         "quantity_selector",
         "buy_buttons"
