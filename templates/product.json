@@ -12,6 +12,12 @@
     "main-product": {
       "type": "main-product",
       "blocks": {
+        "variants_ncyAWg": {
+          "type": "variants",
+          "settings": {
+            "variant_type": "pills"
+          }
+        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -26,12 +32,6 @@
           "type": "price",
           "settings": {}
         },
-        "variants_FakCGP": {
-          "type": "variants",
-          "settings": {
-            "variant_type": "pills"
-          }
-        },
         "quantity_selector": {
           "type": "quantity",
           "settings": {}
@@ -44,10 +44,10 @@
         }
       },
       "block_order": [
+        "variants_ncyAWg",
         "vendor",
         "title",
         "price",
-        "variants_FakCGP",
         "quantity_selector",
         "buy_buttons"
       ],
